@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>影片搜索_1080P影院</title>
+  <meta name="description" content="1080P影院站内影片搜索，支持按影片标题、地区、类型、年份和标签查找高清影视内容。">
+  <meta name="keywords" content="热播国产剧高清全集在线_免费电影观看网站-1080P影院,国产,视频,免费,在线观看,高清,影视大全,影片搜索,影视搜索">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/site.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="site-logo" href="./index.html" aria-label="1080P影院">
+      <span class="logo-mark">▶</span>
+      <span class="logo-text">1080P影院</span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <a class="nav-link" href="./index.html">首页</a>
+      <a class="nav-link" href="./categories.html">分类</a>
+      <a class="nav-link" href="./rankings.html">排行榜</a>
+      <a class="nav-link is-active" href="./search.html">搜索</a>
+    </nav>
+    <form class="header-search" action="./search.html" method="get">
+      <input type="search" name="q" placeholder="搜索影片、类型、地区" autocomplete="off">
+      <button type="submit">搜索</button>
+    </form>
+    <button class="menu-toggle" type="button" data-menu-toggle aria-label="打开移动导航">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <div class="mobile-panel" data-mobile-panel>
+    <nav class="mobile-nav" aria-label="移动导航">
+      <a class="mobile-link" href="./index.html">首页</a>
+      <a class="mobile-link" href="./categories.html">分类</a>
+      <a class="mobile-link" href="./rankings.html">排行榜</a>
+      <a class="mobile-link is-active" href="./search.html">搜索</a>
+    </nav>
+    <form class="mobile-search" action="./search.html" method="get">
+      <input type="search" name="q" placeholder="搜索片名或关键词" autocomplete="off">
+      <button type="submit">搜索</button>
+    </form>
+  </div>
+</header>
+<main>
+
+<section class="page-hero compact-hero search-hero">
+  <div class="container">
+    <div class="eyebrow">站内检索</div>
+    <h1>搜索影片</h1>
+    <p>输入片名、地区、类型、年份或标签，快速找到想看的高清内容。</p>
+    <form class="search-page-form" data-search-form>
+      <input type="search" name="q" data-search-input placeholder="请输入关键词" autocomplete="off">
+      <button type="submit">搜索</button>
+    </form>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="search-result-heading">
+      <h2 data-search-title>热门内容</h2>
+      <p>搜索结果会在这里展示。</p>
+    </div>
+    <div class="movie-grid large-grid" data-search-results></div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="footer-logo" href="./index.html">1080P影院</a>
+      <p>提供热播国产剧高清全集在线观看及免费电影观看服务，涵盖当下最受欢迎的电视剧集和电影作品，更新及时，提供高清流畅播放体验。</p>
+    </div>
+    <div>
+      <h2>热门频道</h2>
+      <div class="footer-links">
+        <a href="./categories.html">影片分类</a>
+        <a href="./rankings.html">热播排行</a>
+        <a href="./search.html">站内搜索</a>
+      </div>
+    </div>
+  </div>
+</footer>
+  <script type="module" src="./assets/app.js"></script>
+  <script type="module">
+import { initSearchPage } from "./assets/app.js";
+import { movies } from "./assets/search-data.js";
+
+initSearchPage(movies);
+</script>
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?95df08bc498ee0333203841fd6fee1eb";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>
